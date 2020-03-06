@@ -1,2 +1,13 @@
 <!-- <hello name="{{ name }}"></hello> -->
 <ng-template [ngIf]="name">Hello Nagendra</ng-template>
+
+<div *ngFor = "let item of items">
+<div *ngIf="item.id === 'cat'">
+{{item.id}}
+</div>
+</div>
+<hr>
+
+<ng-container *ngFor="let item of items">
+<div *ngIf="item.id">{{item.id}}</div>
+</ng-container>
